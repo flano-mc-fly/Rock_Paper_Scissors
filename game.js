@@ -17,8 +17,14 @@ function getComputerChoice() {
 }
 
 //create a function named "getHumanChoice"
-//prompt the question: "What do you choose? Rock, paper or scissors?"
-//create the variable "humanChoice" and store the user answer.
+function getHumanChoice() {
+    //create the variable "humanChoice" and store the answer.
+    //prompt the question: "Let's play a game. What do you choose? rock, paper or scissors?"
+    let humanChoice = prompt("Let's play a game. What do you choose? rock, paper or scissors?");
+    console.log(humanChoice)
+}
+
+
 
 
 
