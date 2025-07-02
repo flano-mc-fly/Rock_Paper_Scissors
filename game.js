@@ -24,6 +24,10 @@ function getHumanChoice() {
     console.log(humanChoice)
 }
 
+//create variable "humanScore" and set it to 0
+var humanScore = 0
+//create variable "computerScore" and set it to 0
+var computerScore = 0
 
 
 
