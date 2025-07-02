@@ -16,8 +16,9 @@ function getComputerChoice() {
     }
 }
 
-
-    
+//create a function named "getHumanChoice"
+//prompt the question: "What do you choose? Rock, paper or scissors?"
+//create the variable "humanChoice" and store the user answer.
 
 
 
