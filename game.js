@@ -1,7 +1,7 @@
 //create a function named "getComputerChoice"
 function getComputerChoice() {
 //generate a random number   
-    let number = Math.random();
+    const number = Math.random();
 //if random number is less than 0,33 return "rock"
     if (number <= 0.33) {
         return "rock";
@@ -18,33 +18,48 @@ function getComputerChoice() {
 
 //create a function named "getHumanChoice"
 function getHumanChoice() {
-    //create the variable "answer", store the answer and make it case-insensitive.
+    //create the variable "answer" and store the answer.
     //prompt the question: "Let's play a game. What do you choose? rock, paper or scissors?"
-    let answer = prompt("Let's play a game. What do you choose? rock, paper or scissors?").toLowerCase();
-    
+    const answer = prompt("Let's play a game. What do you choose? rock, paper or scissors?").toLowerCase();
+    return answer;
 }
 
 //create variable "humanScore" and set it to 0
-var humanScore = 0;
+let humanScore = 0;
 //create variable "computerScore" and set it to 0
-var computerScore = 0;
+let computerScore = 0;
 
 //create a function named "playRound"
 //define two parameters for "playRound": "humanChoice" and "computerChoice"
 function playRound (humanChoice, computerChoice) {
 //use these parameters to take human and computer choices as arguments
-getComputerChoice(computerChoice)
-getHumanChoice(humanChoice)
-console.log(humanChoice)
-console.log(computerChoice)
+
+if (humanChoice === computerChoice) {
+console.log("it's a tie");
+}
 //rock beats scissors
-
-//paper beats rock
-
+else if ((humanChoice === "rock" && computerChoice === "scissors") || 
+//paper beats rock    
+        (humanChoice === "paper" && computerChoice === "rock") ||
 //scissors beat paper
-
+        (humanChoice === "scissors" && computerChoice === "paper"))
+{
+    console.log(`you win! ${humanChoice} beats ${computerChoice}`);
+}
+//computer rock beats scissors
+else if ((computerChoice === "rock" && humanChoice === "scissors") || 
+//computer paper beats rock    
+        (computerChoice === "paper" && humanChoice === "rock") ||
+//computer scissors beat paper
+        (computerChoice === "scissors" && humanChoice === "paper"))
+{
+    console.log(`you lose! ${computerChoice} beats ${humanChoice}`);
+}
 }
 
 //announce the winner
 //increment "humanScore" or "computerScore" variable based on the round winner
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 
+playRound(humanSelection, computerSelection);
