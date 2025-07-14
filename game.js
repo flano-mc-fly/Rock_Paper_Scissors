@@ -44,10 +44,10 @@ function playGame() {
     //scissors beat paper
             (humanChoice === "scissors" && computerChoice === "paper"))
     {
-    //announce the human as winner
     //increment "humanScore" variable
         ++humanScore 
-        console.log(`you win! ${humanChoice} beats ${computerChoice}`);
+    //announce the human as winner
+        console.log(`You win! ${humanChoice} beats ${computerChoice}`);
     }
     //computer rock beats scissors
     else if ((computerChoice === "rock" && humanChoice === "scissors") || 
@@ -56,10 +56,10 @@ function playGame() {
     //computer scissors beat paper
             (computerChoice === "scissors" && humanChoice === "paper"))
     {
-    //announce the computer as winner
     //increment "computerScore" variable
         ++computerScore
-        console.log(`you lose! ${computerChoice} beats ${humanChoice}`);
+    //announce the computer as winner
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
     }
     }
     //play 5 rounds
@@ -73,9 +73,9 @@ function playGame() {
         console.log(`You won the game! You got ${humanScore} points. The computer only ${computerScore}`)
     }
     else if (computerScore > humanScore){
-        console.log(`Sorry you lost the game! You got only ${humanScore} points. The computer got ${computerScore}`)
+        console.log(`Sorry you lost the game! You got only ${humanScore} point(s). The computer got ${computerScore}`)
     }
     else {
-        console.log(`It's a tie! No Winner for this game. Let's play another round`)
+        console.log(`It's a tie! No winner for this game. Let's play another round`)
     }
 }
