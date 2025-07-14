@@ -44,6 +44,9 @@ else if ((humanChoice === "rock" && computerChoice === "scissors") ||
 //scissors beat paper
         (humanChoice === "scissors" && computerChoice === "paper"))
 {
+//announce the human as winner
+//increment "humanScore" variable
+    ++humanScore 
     console.log(`you win! ${humanChoice} beats ${computerChoice}`);
 }
 //computer rock beats scissors
@@ -53,12 +56,14 @@ else if ((computerChoice === "rock" && humanChoice === "scissors") ||
 //computer scissors beat paper
         (computerChoice === "scissors" && humanChoice === "paper"))
 {
+//announce the computer as winner
+//increment "computerScore" variable
+    ++computerScore
     console.log(`you lose! ${computerChoice} beats ${humanChoice}`);
 }
 }
 
-//announce the winner
-//increment "humanScore" or "computerScore" variable based on the round winner
+
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
